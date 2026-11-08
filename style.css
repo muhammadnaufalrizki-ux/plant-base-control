@@ -1,0 +1,436 @@
+/* ==============================================================================
+   PLANT BASE CONTROL - SS6 PLANT CORPORATE THEME
+   Warna Merah Putih (Dominan Putih) - Standar Resmi Site Tambang SS6 Plant
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --amm-red: #dc2626;
+  --amm-red-dark: #b91c1c;
+  --amm-red-deep: #991b1b;
+  --amm-red-light: #fef2f2;
+  --amm-red-border: #fca5a5;
+  --amm-white: #ffffff;
+  --amm-bg: #f8fafc;
+  --amm-bg-subtle: #f1f5f9;
+  --amm-border: #e2e8f0;
+  --amm-border-strong: #cbd5e1;
+  --amm-text-main: #0f172a;
+  --amm-text-muted: #64748b;
+  --amm-text-subtle: #475569;
+}
+
+html {
+  background-color: var(--amm-bg);
+  color: var(--amm-text-main);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--amm-bg) !important;
+  background-image:
+    radial-gradient(ellipse at 10% 15%, rgba(220, 38, 38, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 85%, rgba(220, 38, 38, 0.05) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, rgba(248, 250, 252, 1) 0%, transparent 100%),
+    linear-gradient(135deg, #f8fafc 0%, #fef2f2 50%, #f8fafc 100%);
+  background-attachment: fixed;
+  color: var(--amm-text-main) !important;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom scrollbars (Bersih & Elegan) */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==============================================================================
+   AMM CORPORATE HEADER & NAVBAR (MERAH PUTIH)
+   ============================================================================== */
+header {
+  background-color: #ffffff !important;
+  border-top: 4px solid var(--amm-red) !important; /* AMM Red Top Accent */
+  border-bottom: 1px solid var(--amm-border) !important;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+header h1 {
+  color: var(--amm-text-main) !important;
+}
+
+/* ==============================================================================
+   OVERRIDE BACKGROUND SLATE MENJADI PUTIH BERSIH AMM (DOMINAN PUTIH)
+   ============================================================================== */
+.bg-slate-900,
+.bg-slate-900\/90,
+.bg-slate-900\/80,
+.bg-slate-900\/60 {
+  background-color: #ffffff !important;
+  color: var(--amm-text-main) !important;
+  border-color: var(--amm-border) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.04) !important;
+}
+
+.bg-slate-950,
+.bg-slate-950\/80,
+.bg-slate-950\/90 {
+  background-color: var(--amm-bg) !important;
+  color: var(--amm-text-main) !important;
+  border-color: var(--amm-border-strong) !important;
+}
+
+/* Borders */
+.border-slate-800,
+.border-slate-800\/80,
+.border-slate-800\/50,
+.border-slate-700,
+.border-slate-700\/60 {
+  border-color: var(--amm-border) !important;
+}
+
+/* Text Colors */
+.text-slate-400,
+.text-slate-500 {
+  color: var(--amm-text-muted) !important;
+}
+
+.text-slate-300 {
+  color: var(--amm-text-subtle) !important;
+}
+
+/* Titles that had text-white */
+h1.text-white,
+h2.text-white,
+h3.text-white,
+h4.text-white,
+h5.text-white {
+  color: var(--amm-text-main) !important;
+}
+
+/* General text-white in main content (not in modals/dark-bg) */
+.text-white {
+  color: var(--amm-text-main);
+}
+
+/* Teks amber-400 pada bg putih — ubah ke gelap agar terbaca */
+.text-amber-400 {
+  color: #b45309 !important; /* amber-700 agar kontras di bg putih */
+}
+
+/* Clock text — tetap gelap agar terbaca */
+#liveClock {
+  color: #dc2626 !important; /* merah AMM pada bg putih */
+}
+#liveDate {
+  color: #64748b !important;
+}
+
+/* Teks tabel dan kartu — pastikan cukup gelap */
+tbody td {
+  color: #1e293b !important;
+}
+
+/* Badge DAMAGE di tabel — teks putih di atas bg gelap — JANGAN di-override */
+tbody td span.bg-slate-800,
+tbody td span.bg-slate-700,
+tbody td span.font-bold.bg-slate-800 {
+  color: #ffffff !important;
+  background-color: #334155 !important;
+  border-color: #475569 !important;
+}
+
+/* Tombol dan badge warna putih di atas bg berwarna — JANGAN di-override */
+.bg-red-600 .text-white,
+.bg-emerald-600 .text-white,
+.bg-rose-600 .text-white,
+.bg-amber-500 .text-white,
+button .text-white,
+span.text-white {
+  color: #ffffff !important;
+}
+
+/* Teks connection badge (biru) */
+#connectionBadge {
+  color: #1d4ed8 !important;
+  background-color: #eff6ff !important;
+  border-color: #93c5fd !important;
+}
+#connectionBadge span:first-child {
+  background-color: #3b82f6 !important;
+}
+
+/* Konfirmasi badge "Login untuk Edit" */
+tbody td span.bg-amber-100 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #d97706 !important;
+}
+
+/* ==============================================================================
+   AMM NAVIGATION TABS (MERAH PUTIH)
+   ============================================================================== */
+.tab-btn {
+  background-color: #ffffff !important;
+  color: #475569 !important;
+  border: 1px solid var(--amm-border) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.tab-btn:hover {
+  background-color: var(--amm-red-light) !important;
+  color: var(--amm-red) !important;
+  border-color: var(--amm-red-border) !important;
+}
+
+.tab-btn.bg-red-600,
+.tab-btn.bg-amber-500,
+.tab-btn.font-bold:not(:hover) {
+  background-color: var(--amm-red) !important;
+  color: #ffffff !important;
+  border-color: var(--amm-red) !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25) !important;
+}
+
+.tab-btn.bg-red-600 *,
+.tab-btn.bg-red-600 i,
+.tab-btn.bg-red-600 span {
+  color: #ffffff !important;
+}
+
+.tab-btn.bg-red-600 .tab-badge {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ==============================================================================
+   INPUTS, SELECTS & FORM CONTROLS (PUTIH BERSIH DENGAN AKSEN MERAH AMM)
+   ============================================================================== */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  background-color: #ffffff !important;
+  color: var(--amm-text-main) !important;
+  border: 1px solid var(--amm-border-strong) !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus,
+textarea:focus {
+  background-color: #ffffff !important;
+  border-color: var(--amm-red) !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15) !important;
+  outline: none !important;
+}
+
+label {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+}
+
+/* ==============================================================================
+   TABLE & SPREADSHEET ROW STYLING (MERAH PUTIH & STATUS INDIKATOR)
+   ============================================================================== */
+table {
+  background-color: #ffffff !important;
+  color: var(--amm-text-main) !important;
+}
+
+thead, thead tr, thead th {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-bottom: 2px solid #334155 !important;
+  font-weight: 800 !important;
+}
+
+tbody tr {
+  background-color: #ffffff;
+  color: var(--amm-text-main) !important;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.15s ease;
+}
+
+tbody tr:hover {
+  background-color: #fef2f2 !important; /* Soft AMM Red Hover */
+}
+
+/* Status 1: BREAKDOWN (Kuning/Oranye AMM Warning) */
+.row-status-process {
+  background-color: #fffbeb !important;
+  border-left: 5px solid #f59e0b !important;
+}
+.row-status-process:hover {
+  background-color: #fef3c7 !important;
+}
+
+/* Status 2: RFU / READY (Hijau Siap Operasi) */
+.row-status-ready {
+  background-color: #f0fdf4 !important;
+  border-left: 5px solid #10b981 !important;
+}
+.row-status-ready:hover {
+  background-color: #dcfce7 !important;
+}
+
+/* Status 3: CANCEL (Merah AMM Batal) */
+.row-status-cancel {
+  background-color: #fff1f2 !important;
+  border-left: 5px solid #ef4444 !important;
+}
+.row-status-cancel:hover {
+  background-color: #fee2e2 !important;
+}
+
+/* ==============================================================================
+   FILTER BUTTONS (3 STATUS AMM)
+   ============================================================================== */
+.filter-btn,
+.sheet-filter-btn {
+  background-color: #ffffff;
+  color: #475569;
+  border: 1px solid var(--amm-border);
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover,
+.sheet-filter-btn:hover {
+  background-color: var(--amm-red-light);
+  color: var(--amm-red);
+  border-color: var(--amm-red-border);
+}
+
+.filter-btn.active-filter,
+.sheet-filter-btn.active-filter {
+  background-color: var(--amm-red) !important;
+  color: #ffffff !important;
+  border-color: var(--amm-red) !important;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.25) !important;
+}
+
+/* ==============================================================================
+   MODAL WINDOWS & DIALOGS (PUTIH BERSIH DENGAN AKSEN MERAH AMM)
+   ============================================================================== */
+#modalLogin > div > div,
+#modalRegister > div > div,
+#modalProfile > div > div,
+#modalSettings > div > div,
+#modalRFU > div > div,
+#modalDetailTiket > div > div,
+#quickAddHistoryModal > div > div {
+  background-color: #ffffff !important;
+  color: var(--amm-text-main) !important;
+  border: 1px solid var(--amm-border) !important;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.2) !important;
+}
+
+/* SweetAlert2 Popup Override (Tema Merah Putih) */
+.swal2-popup {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+.swal2-title {
+  color: #0f172a !important;
+}
+.swal2-html-container {
+  color: #334155 !important;
+}
+.swal2-confirm {
+  background-color: var(--amm-red) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* ==============================================================================
+   PULSE & GLOW EFFECTS
+   ============================================================================== */
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+.pulse-active {
+  animation: pulse-dot 1.8s infinite ease-in-out;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print Optimization for Dossier */
+@media print {
+  header, nav, #authGuestButtons, .tab-btn, button, #btnRefresh {
+    display: none !important;
+  }
+  body, main {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+}
+
+
+/* =============================================
+   NAV MENU COLLAPSIBLE / TOGGLE
+   ============================================= */
+
+.nav-menu-collapsible {
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.25s ease,
+              padding 0.35s ease;
+  overflow: hidden;
+}
+
+.nav-menu-collapsible.nav-menu-open {
+  max-height: 600px; /* cukup besar untuk semua menu items */
+  opacity: 1;
+}
+
+.nav-menu-collapsible.nav-menu-closed {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Chevron rotation saat collapsed */
+#navToggleChevron.chevron-collapsed {
+  transform: rotate(180deg);
+}

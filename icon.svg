@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background with rounded corners (Squircle) -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Safety Hardhat Helmet Icon -->
+  <g filter="url(#shadow)" transform="translate(64, 50)">
+    <!-- Helmet Dome -->
+    <path d="M 192 60 C 105 60 40 135 40 230 C 40 240 45 250 55 250 L 329 250 C 339 250 344 240 344 230 C 344 135 279 60 192 60 Z" fill="#ffffff" />
+    
+    <!-- Helmet Center Ridge -->
+    <path d="M 176 62 C 182 60 202 60 208 62 L 214 250 L 170 250 Z" fill="#e2e8f0" />
+    
+    <!-- Helmet Brim / Visor -->
+    <path d="M 15 245 C 10 245 0 255 0 268 C 0 285 20 295 45 295 L 339 295 C 364 295 384 285 384 268 C 384 255 374 245 369 245 Z" fill="#ffffff" />
+    
+    <!-- Front Reflector Lamp / Badge -->
+    <rect x="156" y="160" width="72" height="48" rx="10" fill="#f59e0b" stroke="#ffffff" stroke-width="6" />
+    <circle cx="192" cy="184" r="14" fill="#ffffff" />
+  </g>
+
+  <!-- SS6 PLANT Badge -->
+  <rect x="106" y="380" width="300" height="58" rx="29" fill="#ffffff" filter="url(#shadow)" />
+  <text x="256" y="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#b91c1c" text-anchor="middle" letter-spacing="3">SS6 PLANT</text>
+</svg>
